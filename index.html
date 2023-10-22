@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logan Sizemore</title>
-  </head>
-  <body>
-    <div>
-      <h1>
-        My First Website!
-      </h1>
-    </div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="normalize.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Header Mockup</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <h1 class="nav__title">Logan Sizemore</h1>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#">About Me</a></li>
+                <li class="nav__item"><a href="#">Research</a></li>
+                <li class="nav__item"><a href="#">Projects</a></li>
+                <li class="nav__item"><a href="#">Resume</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+          <div class="hero__title-container"><h1>About Me</h1></div>
+          <div class="hero__text-container"><p>
+            I serve as a faculty member in the Computer Science department at Western Washington University, where I also completed my Master's degree. Additionally, I have degrees in Chemistry and Social Studies with an emphasis in Political Science. Currently, I am involved in specialized research that employs deep learning techniques to solve complex problems in astronomy.</p></div>
+        </div>
+        <div class="half-dome">
+          <div class="half-dome__decor"></div>
+        </div>
+    </header>
+    <section class="gallery">
+        <div class="card">
+          <div class="card__title-content"><h2>skeletonkey</h2></div>
+          <img src="projects_logos/sklogo_mono.svg" alt="skeletonkey">
+          <div class="card__info">skeletonkey is a simple, lightweight, and flexible configuration management tool that allows you to manage complex configurations for your applications using YAML files. It dynamically loads classes and their arguments at runtime, making it easy to set up and modify your projects.</div>
+        </div>
+        <div class="card">
+          <div class="card__title-content"><h2>BOSS Net</h2></div>
+          <img src="" alt="bossnet">
+          <div class="card__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</div>
+        </div>
+        <div class="card">
+          <div class="card__title-content"><h2>APOGEE Net 3</h2></div>
+          <img src="" alt="anet">
+          <div class="card__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</div>
+        </div>
+    </section>
+</body>
 </html>
