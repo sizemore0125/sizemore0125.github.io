@@ -1,0 +1,50 @@
+.project_container {
+    height: 200px; /* Set the div height */
+    display: flex; /* Optional: Aligns content */
+    justify-content: center; /* Centers image horizontally */
+    align-items: center; /* Centers image vertically */
+    border-radius: inherit;
+}
+
+.project_container img {
+    height: 175px; /* Smaller height for the image */
+    width: auto;   /* Maintains aspect ratio */
+}
+
+#sk_container img {
+    z-index: 1;
+}
+
+#sk_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../images/fulls/03.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%); 
+    z-index: 0;
+    border-radius: inherit;
+}
+
+#boss_container img {
+    z-index: 1;
+}
+
+#boss_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../images/fulls/03.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(300%) saturate(25%); 
+    z-index: 0;
+    border-radius: inherit;
+}
