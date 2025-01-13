@@ -1,0 +1,378 @@
+<!DOCTYPE html> <html><head>
+		<title>Operators and Expressions</title>
+		<base href="../">
+		<meta id="root-path" root-path="../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="lecture_materials - Operators and Expressions">
+		<meta property="og:title" content="Operators and Expressions">
+		<meta property="og:description" content="lecture_materials - Operators and Expressions">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="day4_operators_and_expressions/operators-and-expressions.html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="lecture_materials">
+		<script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="stylesheet" href="lib/styles/theme.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript></head><body class="publish css-settings-manager theme-dark show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><h2><a data-tooltip-position="top" aria-label="cs145" data-href="cs145" href="cs145.html" class="internal-link" target="_self" rel="noopener nofollow">Home</a></h2></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered is-readable-line-width"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="Operators and Expressions">Operators and Expressions</h1><div class="el-p"><p dir="auto">For sake of example, we will begin with the toy <code>Hello.java</code> program that we have been using thus far in class:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Hello</span> <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">// More code written here...</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">You can assume that much of the code written below our print statement in the <code>main</code> method.</p></div><div class="el-h2 heading-wrapper"><h2 data-heading="Arithmetic Expressions" dir="auto" class="heading" id="Arithmetic_Expressions">Arithmetic Expressions</h2><div class="heading-children"><div class="el-p"><p dir="auto">Java has several arithmetic operators that can be used to perform basic mathematical operations. These operators are the same as those used in other programming languages like Python:</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Operator</th>
+<th dir="ltr">Description</th>
+<th dir="ltr">Example</th>
+<th dir="ltr">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto"><code>+</code></td>
+<td dir="ltr">Addition</td>
+<td dir="auto"><code>5 + 3</code></td>
+<td dir="auto"><code>8</code></td>
+</tr>
+<tr>
+<td dir="auto"><code>-</code></td>
+<td dir="ltr">Subtraction</td>
+<td dir="auto"><code>5 - 3</code></td>
+<td dir="auto"><code>2</code></td>
+</tr>
+<tr>
+<td dir="auto"><code>*</code></td>
+<td dir="ltr">Multiplication</td>
+<td dir="auto"><code>5 * 3</code></td>
+<td dir="auto"><code>15</code></td>
+</tr>
+<tr>
+<td dir="auto"><code>/</code></td>
+<td dir="ltr">Division</td>
+<td dir="auto"><code>6 / 3</code></td>
+<td dir="auto"><code>2</code></td>
+</tr>
+<tr>
+<td dir="auto"><code>%</code></td>
+<td dir="ltr">Modulus (remainder)</td>
+<td dir="auto"><code>7 % 3</code></td>
+<td dir="auto"><code>1</code></td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto">I don’t expect you to <em>memorize</em> these. You’ll learn them through practice with labs and homework assignments.</p></div><div class="el-h3 heading-wrapper"><h3 data-heading="Addition and Subtraction" dir="auto" class="heading" id="Addition_and_Subtraction">Addition and Subtraction</h3><div class="heading-children"><div class="el-p"><p dir="auto">The addition (<code>+</code>) and subtraction (<code>-</code>) operators are used to add and subtract two numbers respectively. Here's an example:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> y <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> z <span class="token operator">=</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+z <span class="token operator">=</span> x <span class="token operator">-</span> y  
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">This will display:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded"><span class="token number">15</span>
+-5
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">These “behave” just like how you “know” of them from elementary mathematics!</p></div></div></div><div class="el-h3 heading-wrapper"><h3 data-heading="Multiplication and Division" dir="auto" class="heading" id="Multiplication_and_Division">Multiplication and Division</h3><div class="heading-children"><div class="el-p"><p dir="auto">The multiplication (<code>*</code>) and division (<code>/</code>) operators are used to add and subtract two numbers<br>
+respectively. Here's an example:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> 
+<span class="token keyword">int</span> y <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> z <span class="token operator">=</span> x <span class="token operator">*</span> y<span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+z <span class="token operator">=</span> x <span class="token operator">/</span> y<span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">This will display:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded"><span class="token number">10</span>
+<span class="token number">2</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">The division operator is also “just like” the elementary math operator you are familiar with, but unlike Python the division operator does not turn <code>z</code> into a float. Instead, <code>z</code> remains and integer and result is rounded down.</p></div></div></div><div class="el-h3 heading-wrapper"><h3 data-heading="Modulo" dir="auto" class="heading" id="Modulo">Modulo</h3><div class="heading-children"><div class="el-p"><p dir="auto">The modulo operator (<code>%</code>) is used to get the remainder of a division operation. For example:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">int</span> z <span class="token operator">=</span> <span class="token number">10</span> <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+z <span class="token operator">=</span> <span class="token number">7</span> <span class="token operator">%</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+z <span class="token operator">=</span> <span class="token number">67</span> <span class="token operator">%</span> <span class="token number">14</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">This will display:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded"><span class="token number">1</span>
+<span class="token number">0</span>
+<span class="token number">11</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div></div></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="Augmented Assignment" dir="auto" class="heading" id="Augmented_Assignment">Augmented Assignment</h2><div class="heading-children"><div class="el-p"><p dir="auto">The <em>assignment operator</em> (<code>=</code>) can also be combined with arithmetic operators to perform arithmetic operations and assign the result to a variable. This is known as augmented assignment. </p></div><div class="el-p"><p dir="auto">Augmented assignment is used to perform an operation and assign the result back to the<br>
+variable. Here are some examples:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token comment">// Example 1: Addition  </span>
+<span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">5</span>  
+x <span class="token operator">+=</span> <span class="token number">3</span>  <span class="token comment">// Equivalent to x = x + 3  </span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Example 2: Subtraction  </span>
+x <span class="token operator">=</span> <span class="token number">5</span>  
+x <span class="token operator">-=</span> <span class="token number">3</span> <span class="token comment">// Equivalent to x = x - 3  </span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Example 3: Multiplication  </span>
+x <span class="token operator">=</span> <span class="token number">5</span>  
+x <span class="token operator">*=</span> <span class="token number">3</span> <span class="token comment">// Equivalent to x = x * 3  </span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Example 4: Division  </span>
+x <span class="token operator">=</span> <span class="token number">10</span>  
+x <span class="token operator">/=</span> <span class="token number">2</span>  
+<span class="token comment">// Equivalent to x = x / 2  </span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Example 5: Modulo  </span>
+x <span class="token operator">=</span> <span class="token number">10</span>  
+x <span class="token operator">%=</span> <span class="token number">3</span> <span class="token comment">// Equivalent to x = x % 3  </span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">This will display:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded"><span class="token number">8</span>
+<span class="token number">2</span>
+<span class="token number">15</span>
+<span class="token number">5</span>
+<span class="token number">1</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">In addition to the <em>Augmented Assignment</em> operators defined above, we have the <strong>increment</strong> (<code>++</code>) and <strong>decrement</strong> (<code>--</code>) operators. These work similarly to the addition and subtraction augmented assignment operators.</p></div><div class="el-p"><p dir="auto">For example:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+x<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token comment">// Equivalent to x += 1 and x = x + 1</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">This will display:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded"><span class="token number">2</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">We can use the increment (or decrement) operator as both a postfix (<code>x++</code>) and a prefix (<code>++x</code>). These two versions generally work the same way. However, there is a subtlety when using them in assignment. </p></div><div class="el-p"><p dir="auto">For example:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> y <span class="token operator">=</span> x<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+y <span class="token operator">=</span> <span class="token operator">++</span>x<span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">This will display:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded"><span class="token number">2</span>
+<span class="token number">1</span>
+<span class="token number">2</span>
+<span class="token number">2</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">When the increment operator is used as a <em>postfix</em>, the value of <code>x</code> is assigned to <code>y</code> <em>before</em> <code>x</code> is incremented. When the increment operator is used as a <em>prefix</em>, the value of <code>x</code> is assigned to <code>y</code> <em>after</em> <code>x</code> is incremented. </p></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="Order of Operations" dir="auto" class="heading" id="Order_of_Operations">Order of Operations</h2><div class="heading-children"><div class="el-p"><p dir="auto">In Java, just like in mathematics, there is an order of operations that determines the sequence in which arithmetic operations are performed. The order of operations is important to understand, as it can affect the result of an expression. </p></div><div class="el-p"><p dir="auto">The order of operations in Java is as follows:  </p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Parentheses  </li>
+<li data-line="1" dir="auto">Multiplication and Division (from left to right)  </li>
+<li data-line="2" dir="auto">Addition and Subtraction (from left to right)  </li>
+</ul></div><div class="el-p"><p dir="auto">This means that any expressions inside parentheses are evaluated first, followed any multiplication or division operations, and finally any addition or subtraction operations.</p></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="Casting" dir="auto" class="heading" id="Casting">Casting</h2><div class="heading-children"><div class="el-p"><p dir="auto">In Java, <strong>casting</strong> allows us to explicitly or implicitly convert a value from one type to another. Casting is necessary when working with data types that differ in size or precision.</p></div><div class="el-p"><p dir="auto">There are two types of Casting: <strong>Implicit Casting</strong> and <strong>Explicit Casting</strong> </p></div><div class="el-h3 heading-wrapper"><h3 data-heading="Implicit Casting (widening)" dir="auto" class="heading" id="Implicit_Casting_(widening)">Implicit Casting (widening)</h3><div class="heading-children"><div class="el-p"><p dir="auto"> This is performed automatically by the compiler when converting a smaller type to a larger type. </p></div><div class="el-p"><p dir="auto">For example:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">short</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> y <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">This will display:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded"><span class="token number">11</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">The variable <code>x</code> was converted automatically from a <code>short</code> to a <code>int</code>. Implicit casting is safe because there is no loss of data.</p></div><div class="el-p"><p dir="auto">Implicit casting can occur when the target type has a larger range or higher precision than the source type. For example: <code>byte</code> → <code>short</code> → <code>int</code> → <code>long</code> → <code>float</code> → <code>double</code></p></div></div></div><div class="el-h3 heading-wrapper"><h3 data-heading="Explicit Casting (narrowing)" dir="auto" class="heading" id="Explicit_Casting_(narrowing)">Explicit Casting (narrowing)</h3><div class="heading-children"><div class="el-p"><p dir="auto">Explicit casting must be performed manually when converting a larger type to a smaller type. This is done by placing the target type in parentheses before the value.</p></div><div class="el-p"><p dir="auto">If we attempt:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">short</span> y <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto"> It will result in this error:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded">Main.java:4: error: incompatible types: possible lossy conversion from int to short
+    short y <span class="token operator">=</span> x + <span class="token number">1</span><span class="token punctuation">;</span>
+                ^
+<span class="token number">1</span> error
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">Instead, we need to explicitly cast <code>x</code> to type <code>short</code> in order for our expression to work. We do this by prefixing <code>x</code> with the type we want <code>x</code> to become in paratheses <code>(short)</code>. </p></div><div class="el-p"><p dir="auto">For example:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">short</span> y <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">short</span><span class="token punctuation">)</span>x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">This will display:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded"><span class="token number">11</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div></div></div><div class="el-h3 heading-wrapper"><h3 data-heading="String Casting" dir="auto" class="heading" id="String_Casting">String Casting</h3><div class="heading-children"><div class="el-p"><p dir="auto">So far, we have seen how we can change primitive types into other primitive types. However, what if we want to turn a variable of type <code>String</code> into an <code>int</code>. This is especially important when parsing user input, as it often comes in the form of a <code>String</code>. </p></div><div class="el-p"><p dir="auto">Each primitive type has an associated wrapper class (e.g., <code>Integer</code>, <code>Double</code>, etc.) with a static static method that takes the form <code>parseXxx()</code>, which can be used to convert a <code>String</code> to the corresponding primitive type.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Method</th>
+<th dir="ltr">Target Type</th>
+<th dir="ltr">Example</th>
+<th dir="ltr">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>Integer.parseInt()</code></td>
+<td dir="ltr"><code>int</code></td>
+<td dir="ltr"><code>Integer.parseInt("123")</code></td>
+<td dir="auto"><code>123</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>Double.parseDouble()</code></td>
+<td dir="ltr"><code>double</code></td>
+<td dir="ltr"><code>Double.parseDouble("3.14")</code></td>
+<td dir="auto"><code>3.14</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>Boolean.parseBoolean()</code></td>
+<td dir="ltr"><code>boolean</code></td>
+<td dir="ltr"><code>Boolean.parseBoolean("true")</code></td>
+<td dir="ltr"><code>true</code></td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto">For example:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Hello</span> <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">String</span> userString <span class="token operator">=</span> args<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> userInt <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>userString<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>userInt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">Executed like this:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded">java Hello <span class="token number">21</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">This will display:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded"><span class="token number">31</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div></div></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="The Math Class" dir="auto" class="heading" id="The_Math_Class">The Math Class</h2><div class="heading-children"><div class="el-p"><p dir="auto">You may have noticed that, unlike Python, there is no operator for exponentiation in Java. Instead, Java relies on the <code>Math</code> class from the <code>Java.lang</code> package to do many common mathematical operations: </p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr"><strong>Method</strong></th>
+<th dir="ltr"><strong>Description</strong></th>
+<th dir="ltr"><strong>Example</strong></th>
+<th dir="ltr"><strong>Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>Math.abs(x)</code></td>
+<td dir="ltr">Absolute value of <code>x</code></td>
+<td dir="ltr"><code>Math.abs(-10)</code></td>
+<td dir="auto"><code>10</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>Math.max(x, y)</code></td>
+<td dir="ltr">Maximum of <code>x</code> and <code>y</code></td>
+<td dir="ltr"><code>Math.max(5, 10)</code></td>
+<td dir="auto"><code>10</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>Math.min(x, y)</code></td>
+<td dir="ltr">Minimum of <code>x</code> and <code>y</code></td>
+<td dir="ltr"><code>Math.min(5, 10)</code></td>
+<td dir="auto"><code>5</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>Math.ceil(x)</code></td>
+<td dir="ltr">Ceiling of <code>x</code></td>
+<td dir="ltr"><code>Math.ceil(4.3)</code></td>
+<td dir="auto"><code>5.0</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>Math.floor(x)</code></td>
+<td dir="ltr">Floor of <code>x</code></td>
+<td dir="ltr"><code>Math.floor(4.7)</code></td>
+<td dir="auto"><code>4.0</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>Math.round(x)</code></td>
+<td dir="ltr">Rounds <code>x</code> to the nearest integer</td>
+<td dir="ltr"><code>Math.round(4.5)</code></td>
+<td dir="auto"><code>5</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>Math.pow(x, y)</code></td>
+<td dir="ltr"><code>x</code> raised to the power of <code>y</code></td>
+<td dir="ltr"><code>Math.pow(2, 3)</code></td>
+<td dir="auto"><code>8.0</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>Math.sqrt(x)</code></td>
+<td dir="ltr">Square root of <code>x</code></td>
+<td dir="ltr"><code>Math.sqrt(16)</code></td>
+<td dir="auto"><code>4.0</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>Math.sin(x)</code></td>
+<td dir="ltr">Sine of <code>x</code></td>
+<td dir="ltr"><code>Math.sin(Math.PI/2)</code></td>
+<td dir="auto"><code>1.0</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>Math.cos(x)</code></td>
+<td dir="ltr">Cosine of <code>x</code></td>
+<td dir="ltr"><code>Math.cos(0)</code></td>
+<td dir="auto"><code>1.0</code></td>
+</tr>
+<tr>
+<td dir="ltr"><code>Math.random()</code></td>
+<td dir="ltr">Random number between <code>0.0</code> and <code>1.0</code></td>
+<td dir="ltr"><code>Math.random()</code></td>
+<td dir="ltr">Varies</td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto">You can find a complete list <a data-tooltip-position="top" aria-label="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html" rel="noopener nofollow" class="external-link" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html" target="_blank">here</a></p></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="Comparison (Relational) Operators" dir="auto" class="heading" id="Comparison_(Relational)_Operators">Comparison (Relational) Operators</h2><div class="heading-children"><div class="el-p"><p dir="auto">Java also provides several <strong>comparison operators</strong> for comparing Boolean values. The most<br>
+common comparison operators are:</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Operator</th>
+<th dir="ltr">Description</th>
+<th dir="ltr">Example</th>
+<th dir="ltr">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto"><code>==</code></td>
+<td dir="ltr">Equal to</td>
+<td dir="auto"><code>5 == 5</code></td>
+<td dir="ltr"><code>true</code></td>
+</tr>
+<tr>
+<td dir="auto"><code>!=</code></td>
+<td dir="ltr">Not equal to</td>
+<td dir="auto"><code>5 != 3</code></td>
+<td dir="ltr"><code>true</code></td>
+</tr>
+<tr>
+<td dir="auto"><code>&gt;</code></td>
+<td dir="ltr">Greater than</td>
+<td dir="auto"><code>5 &gt; 3</code></td>
+<td dir="ltr"><code>true</code></td>
+</tr>
+<tr>
+<td dir="auto"><code>&lt;</code></td>
+<td dir="ltr">Less than</td>
+<td dir="auto"><code>5 &lt; 3</code></td>
+<td dir="ltr"><code>false</code></td>
+</tr>
+<tr>
+<td dir="auto"><code>&gt;=</code></td>
+<td dir="ltr">Greater than or equal to</td>
+<td dir="auto"><code>5 &gt;= 5</code></td>
+<td dir="ltr"><code>true</code></td>
+</tr>
+<tr>
+<td dir="auto"><code>&lt;=</code></td>
+<td dir="ltr">Less than or equal to</td>
+<td dir="auto"><code>5 &lt;= 3</code></td>
+<td dir="ltr"><code>false</code></td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto">For example:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x <span class="token operator">==</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">This will display:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded"><span class="token boolean">false</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto"><strong>*Note</strong>: The assignment operator (<code>=</code>) is very different from the equality operator (<code>==</code>).*</p></div><div class="el-p"><p dir="auto">Assignment Operator (<code>=</code>): You can think of this as a command.  <code>int x = 5;</code> means <em>"<code>x</code> IS <code>5</code>"</em>.  Equality Operator (<code>==</code>): You can think of this as a question. <code>x == 5;</code> means <em>"is <code>x</code> equal to <code>5</code>?"</em></p></div><div class="el-p"><p dir="auto">Other Examples:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x <span class="token operator">!=</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x <span class="token operator">&gt;=</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">This will display:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded"><span class="token boolean">true</span>
+<span class="token boolean">false</span>
+<span class="token boolean">true</span>
+<span class="token boolean">false</span>
+<span class="token boolean">true</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="String Comparison" dir="auto" class="heading" id="String_Comparison">String Comparison</h2><div class="heading-children"><div class="el-p"><p dir="auto">In Java, you cannot use the equality operator (<code>==</code>) to compare strings. When you use the equality operator on reference types, the memory location is compared, not any other value associated with that object. So, instead objects of type <code>String</code> are compared using specific methods to ensure correctness.</p></div><div class="el-p"><p dir="auto">The <code>.equals()</code> method checks whether the content of two strings is the same. For example:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token class-name">String</span> str1 <span class="token operator">=</span> <span class="token string">"Java"</span><span class="token punctuation">;</span> 
+<span class="token class-name">String</span> str2 <span class="token operator">=</span> <span class="token string">"Java"</span><span class="token punctuation">;</span>  
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>str1<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>     
+	<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The strings are equal."</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>     
+	<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The strings are not equal."</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">This will display:</p></div><div class="el-pre"><pre class="language-bash" tabindex="0"><code data-line="0" class="language-bash is-loaded">The strings are equal.
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto"><strong>*Note:</strong> You can also use <code>.equalsIgnoreCase()</code> if you want to ignore any case differences between two strings.*</p></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="Logical Operators" dir="auto" class="heading" id="Logical_Operators">Logical Operators</h2><div class="heading-children"><div class="el-p"><p dir="auto">Java provides several <strong>logical operators</strong> for working with Boolean values. The most<br>
+common logical operators are:</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">Operator</th>
+<th dir="ltr">Description</th>
+<th dir="ltr">Example</th>
+<th dir="ltr">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto"><code>&amp;&amp;</code></td>
+<td dir="ltr">Logical AND</td>
+<td dir="ltr"><code>true &amp;&amp; false</code></td>
+<td dir="ltr"><code>false</code></td>
+</tr>
+<tr>
+<td dir="auto"><code>\|\|</code></td>
+<td dir="ltr">Logical OR</td>
+<td dir="ltr"><code>true \|\| false</code></td>
+<td dir="ltr"><code>true</code></td>
+</tr>
+<tr>
+<td dir="auto"><code>!</code></td>
+<td dir="ltr">Logical NOT</td>
+<td dir="ltr"><code>!true</code></td>
+<td dir="ltr"><code>false</code></td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto">For example:</p></div><div class="el-pre"><pre class="language-java" tabindex="0"><code data-line="0" class="language-java is-loaded"><span class="token keyword">boolean</span> isRaining <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token keyword">boolean</span> hasUmbrella <span class="token operator">=</span> <span class="token boolean">false</span>
+
+<span class="token keyword">boolean</span> goOutside <span class="token operator">=</span> <span class="token operator">!</span>isRaining <span class="token operator">||</span> <span class="token punctuation">(</span>isRaining <span class="token operator">&amp;&amp;</span> hasUmbrella<span class="token punctuation">)</span> <span class="token comment">// Output: false</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto"><strong>*Note:</strong> This Boolean expression can be simplified to <code>!isRaining || hasUmbrella</code>*</p></div><div class="mod-footer mod-ui"></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>
