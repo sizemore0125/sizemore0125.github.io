@@ -90,3 +90,17 @@
     margin-top: 0 !important;
     padding-top: 0.5em;
   }
+
+  @media screen and (max-width: 768px) {
+    #navbar {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+
+			#main {
+				padding: 1em 4em;
+			}
+
+	}
