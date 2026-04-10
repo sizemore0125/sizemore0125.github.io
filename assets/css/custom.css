@@ -1,106 +1,158 @@
 .project_container {
-    height: 200px; /* Set the div height */
-    display: flex; /* Optional: Aligns content */
-    justify-content: center; /* Centers image horizontally */
-    align-items: center; /* Centers image vertically */
-    border-radius: inherit;
+  height: 200px;
+  /* Set the div height */
+  display: flex;
+  /* Optional: Aligns content */
+  justify-content: center;
+  /* Centers image horizontally */
+  align-items: center;
+  /* Centers image vertically */
+  border-radius: inherit;
 }
 
 .project_container img {
-    height: 175px; /* Smaller height for the image */
-    width: auto;   /* Maintains aspect ratio */
+  height: 175px;
+  /* Smaller height for the image */
+  width: auto;
+  /* Maintains aspect ratio */
 }
 
 #sk_container img {
-    z-index: 1;
+  z-index: 1;
 }
 
 #sk_container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../../images/fulls/03.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: brightness(50%); 
-    z-index: 0;
-    border-radius: inherit;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../images/fulls/03.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%);
+  z-index: 0;
+  border-radius: inherit;
 }
 
 #boss_container img {
-    z-index: 1;
+  z-index: 1;
 }
 
 #boss_container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../../images/fulls/03.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: brightness(300%) saturate(25%); 
-    z-index: 0;
-    border-radius: inherit;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../images/fulls/03.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(300%) saturate(25%);
+  z-index: 0;
+  border-radius: inherit;
 }
 
 #navbar {
-    padding: 0.5em 1em; /* Less vertical padding */
-    margin: 0 auto 1em auto; /* Reduce bottom spacing */
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: white; /* Optional: ensures it's clean if sticky */
+  padding: 0.5em 1em;
+  /* Less vertical padding */
+  margin: 0 auto 1em auto;
+  /* Reduce bottom spacing */
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  /* Optional: ensures it's clean if sticky */
+}
+
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+#navbar ul li {
+  display: inline;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  text-decoration: none;
+  border-bottom: none !important;
+  font-weight: normal;
+  color: #a2a2a2;
+  transition: color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#one {
+  margin-top: 0 !important;
+  padding-top: 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+
+  #main {
+    padding: 1em 4em;
   }
 
-  #navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    flex-wrap: wrap;
-  }
-  
-  #navbar ul li {
-    display: inline;
-  }
-  
-  #navbar ul li a {
-    text-decoration: none;
-    text-decoration: none;
-    border-bottom: none !important;
-    font-weight: normal;
-    color: #a2a2a2;
-    transition: color 0.3s;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
+}
 
-  #one {
-    margin-top: 0 !important;
-    padding-top: 0.5em;
-  }
+/* Teaching section spacing (reduce default 2em paragraph/list gaps). */
+#four>h3 {
+  margin: 1em 0 0.25em 0;
+}
 
-  @media screen and (max-width: 768px) {
-    #navbar {
-      display: none;
-    }
-  }
+#four>h3:first-of-type {
+  margin-top: 0;
+}
 
-  @media screen and (max-width: 1280px) {
+/* Make school titles stand out a bit more. */
+#four>h3 strong {
+  color: #6f6f6f;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
 
-			#main {
-				padding: 1em 4em;
-			}
+/* "WWU CS Faculty of the Year..." lives in a <p> and inherits a large default margin. */
+#four h3 p {
+  margin: 0.15em 0 0 0;
+  line-height: 1.35em;
+  color: rgba(162, 162, 162, 0.75);
+  font-size: 0.8em;
+}
 
-	}
+#four .term {
+  margin: 0.35em 0 1em 0;
+}
+
+#four .term h4 {
+  margin: 0.25em 0 0.35em 0;
+}
+
+#four ul.course-list {
+  margin: 0 0 0.75em 0;
+  padding-left: 1em;
+}
+
+#four ul.course-list li.course-item {
+  margin: 0.2em 0;
+  padding-left: 0.5em;
+  line-height: 1.45em;
+}
